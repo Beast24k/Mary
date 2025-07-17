@@ -114,9 +114,21 @@
         </section>
 
 
-       <audio autoplay loop>
-<source src="music.mp3" type="audio/mpeg">
-</audio>
+       <!-- Optional instruction or design -->
+  <!-- <h1>Welcome to My Page</h1> -->
+
+  <!-- Music player -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- This script allows autoplay after user taps anywhere -->
+  <script>
+    document.body.addEventListener('click', () => {
+      document.getElementById('bgMusic').play();
+    }, { once: true });
+  </script>
 
         <footer>
             <img src="./images/birthday-background-invitation.jpg" class="w-100" alt="">
